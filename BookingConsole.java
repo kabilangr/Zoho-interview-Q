@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -18,6 +19,7 @@ public class BookingConsole {
     // handling booking events
     public static List<DeliveryExecutive> handleBooking(char restaurant, char destination, double pickupTime,
             List<DeliveryExecutive> deliveryExecutives) {
+        Collections.sort(deliveryExecutives, (a, b) -> a.totalEarnings - b.totalEarnings);
         deliveryExecutives = assignDeliveryExecutive(restaurant, destination, pickupTime,
                 deliveryExecutives);
         return deliveryExecutives;
@@ -102,6 +104,8 @@ public class BookingConsole {
                 newList.add(de);
             }
         }
+        Collections.sort(newList, (a, b) -> a.id - b.id);
+
         // check if slots are available
         if (allottedDelivery == 0) {
             System.out.println("\n\nNo Slots available");
