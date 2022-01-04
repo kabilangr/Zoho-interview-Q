@@ -22,4 +22,4 @@ Check the message and give the input accordingly
 
 - Enter Time in \"HH:mm a\" format -> String
 
-## Enter the time in the proper format for input
+### NOTE : Enter the time in the proper format for input
