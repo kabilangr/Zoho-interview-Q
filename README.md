@@ -8,3 +8,5 @@ Run the code using command :
 ```
 java BookingConsole
 ```
+
+Check the message and give the input accordingly
